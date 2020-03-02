@@ -1,0 +1,27 @@
+{
+  "name": "css-reducer",
+  "version": "1.0.0",
+  "description": "css",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "ts-node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imnull/css-reducer.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "imnull@outlook.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imnull/css-reducer/issues"
+  },
+  "homepage": "https://github.com/imnull/css-reducer#readme",
+  "dependencies": {
+    "css": "^2.2.4",
+    "css-what": "^3.2.1"
+  },
+  "devDependencies": {}
+}
