@@ -55,4 +55,4 @@ export const weight = (selector: string) => {
     return weights(selector).sort(compair).pop()
 }
 
-console.log(weight('div.a#aa #b:hover > .c::before[href^=123], a.b#c::before:hover'))
+// console.log(weight('div.a#aa #b:hover > .c::before[href^=123], a.b#c::before:hover'))
