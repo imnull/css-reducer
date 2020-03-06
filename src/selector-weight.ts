@@ -1,11 +1,10 @@
 import { parse, AttributeSelector } from 'css-what'
+import { TWeight } from './types'
 
-export type Weight = [number, number, number, number]
-
-export const weights = (selector: string): Weight[] => {
+export const weights = (selector: string): TWeight[] => {
     const ss = parse(selector)
     return ss.map(s => {
-        let w: Weight = [0, 0, 0, 0]
+        let w: TWeight = [0, 0, 0, 0]
         s.forEach(item => {
             const { type } = item
             switch(type) {
@@ -40,7 +39,7 @@ export const weights = (selector: string): Weight[] => {
     })
 }
 
-export const compair = (a: Weight, b: Weight) => {
+export const compair = (a: TWeight, b: TWeight) => {
     for(let i = 0; i < 4; i++) {
         if(a[i] > b[i]) {
             return 1
@@ -51,8 +50,6 @@ export const compair = (a: Weight, b: Weight) => {
     return 0
 }
 
-export const weight = (selector: string) => {
-    return weights(selector).sort(compair).pop()
+export const weight = (selector: string): TWeight => {
+    return weights(selector).sort(compair).pop() || [-1, 0, 0, 0]
 }
-
-// console.log(weight('div.a#aa #b:hover > .c::before[href^=123], a.b#c::before:hover'))

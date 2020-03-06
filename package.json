@@ -4,7 +4,8 @@
   "description": "css",
   "main": "dist/index.js",
   "scripts": {
-    "test": "ts-node test"
+    "test": "ts-node test",
+    "build": "webpack && cp src/types.ts dist && cp src/index.d.ts dist"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,10 @@
   },
   "homepage": "https://github.com/imnull/css-reducer#readme",
   "dependencies": {
-    "css": "^2.2.4",
     "css-what": "^3.2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3"
+  }
 }
