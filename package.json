@@ -1,11 +1,11 @@
 {
   "name": "css-reducer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "css",
   "main": "dist/index.js",
   "scripts": {
     "test": "ts-node test/test.ts",
-    "build": "webpack && cp src/types.ts dist && cp src/index.d.ts dist"
+    "build": "rm -rf dist && tsc src/index.ts -d --module commonjs --lib es5 --outDir dist"
   },
   "repository": {
     "type": "git",

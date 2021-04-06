@@ -17,10 +17,11 @@ const convertDeclaration = (declarations: any) => {
     }).reduce((r, v) => ({ ...r, ...v }), {})
 }
 
-const convertRules = (rules: any[]) => {
+const convertRules = (rules: any[]): TStyleSheetItem[] => {
     return rules.map(({ selectors, declarations }) => {
         declarations = convertDeclaration(declarations)
-        return { selectors, declarations }
+        return [selectors, declarations]
+        // return { selectors, declarations }
     })
 
     // return rules.map(({ selectors, declarations }) => {

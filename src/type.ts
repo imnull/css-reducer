@@ -11,9 +11,13 @@ export type TDOMNode = {
     nextSibling?: TDOMNode
     parentNode?: TDOMNode
 }
-export type TStyleSheetItem = {
-    selectors: string[]
-    declarations: {
-        [key: string]: string;
-    }
-}
+// export type TStyleSheetItem = {
+//     selectors: string[]
+//     declarations: {
+//         [key: string]: string;
+//     }
+// }
+export type TStyleSheetItem = [
+    string[],
+    { [key: string]: string }
+]

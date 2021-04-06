@@ -21,7 +21,7 @@ export const compute = (rules: TStyleSheetItem[], node?: TDOMNode | null) => {
         return {}
     }
 
-    const matchRules = rules.map(({ selectors, declarations }, index) => {
+    const matchRules = rules.map(([selectors, declarations], index) => {
         const bingos = selectors.filter(selector => match(selector, node))
         let selector = ''
         if(bingos.length === 1) {
