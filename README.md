@@ -1,4 +1,4 @@
-# css-reducer
+# css-computer
 
 A tool to reduce class and inline styles.
 
