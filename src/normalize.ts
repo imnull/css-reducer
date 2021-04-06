@@ -84,5 +84,6 @@ export default [
     [["details"],{"display":"block"}],
     [["summary"],{"display":"list-item"}],
     [["template"],{"display":"none"}],
-    [["[hidden]"],{"display":"none"}]
+    [["[hidden]"],{"display":"none"}],
+    [["em"],{"fontStyle":"italic"}]
 ] as TStyleSheetItem[]

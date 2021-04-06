@@ -21,3 +21,5 @@ export type TStyleSheetItem = [
     string[],
     { [key: string]: string }
 ]
+
+export type TTestItem = RegExp | { (val: any): boolean } | string | string[]

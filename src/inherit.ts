@@ -1,4 +1,5 @@
-import { css2js } from './utils'
+import { TTestItem } from './type'
+import { css2js, match } from './utils'
 
 
 /**
@@ -50,9 +51,22 @@ export const inheritedProperties = [
     'word-spacing'
 ].map(s => css2js(s))
 
+const notInherit = [
+    {
+        key: 'fontSize',
+        value: /[^r]em$/
+    }
+] as { key: TTestItem, value: TTestItem }[]
+
+const canInherit = (name: string, value: any) => {
+    const item = notInherit.find(({ key }) => match(name, key))
+    return !item || !match(value, item.value)
+}
 
 export const inherited = (style: { [key: string]: any }) => {
-    return Object.keys(style).filter(key => {
-        return inheritedProperties.indexOf(css2js(key)) > -1
+    return Object.keys(style).filter(k => {
+        const key = css2js(k)
+        const val = style[k]
+        return inheritedProperties.indexOf(key) > -1 && canInherit(key, val)
     }).map(key => ({ [key]: style[key] })).reduce((r, v) => ({ ...r, ...v }), {})
 }

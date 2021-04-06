@@ -1,3 +1,5 @@
+import { TTestItem } from './type'
+
 export const css2js = (s: any) => {
     if(typeof s !== 'string') {
         return s
@@ -36,4 +38,17 @@ export const parseStyle = (style: any) => {
         return ''
     })
     return obj
+}
+
+export const match = (value: any, test: TTestItem) => {
+    if(typeof test === 'string') {
+        return value === test
+    } else if(Array.isArray(test)) {
+        return test.includes(value)
+    } else if(test instanceof RegExp) {
+        return test.test(value + '')
+    } else if(typeof test === 'function') {
+        return test(value)
+    }
+    return false
 }

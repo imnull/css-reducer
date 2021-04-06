@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 
-import { getRulesFromFile, compute } from '../src'
+import { compute } from '../src/compute'
+import { getRulesFromFile } from '../src/stylesheet'
 
 const node1 = {
     nodeName: 'a',
@@ -25,3 +26,5 @@ console.log(compute(rules1, node1))
 console.log(compute(rules1, node2))
 console.log(compute(rules1, node3))
 console.log(compute(rules1, { nodeName: 'a' }))
+console.log(compute(rules1, { nodeName: 'h1' }))
+console.log(compute(rules1, { nodeName: 'em', parentNode: { nodeName: 'h1' } }))
