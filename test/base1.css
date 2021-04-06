@@ -1,0 +1,20 @@
+@import "./base0.css";
+a a.b, .b, a.b {
+    border: 1rpx solid #f00;
+}
+.b {
+    font-size: 38px;
+
+}
+
+.c {
+    font-size: 48px;
+}
+
+c c {
+    width: 200px;
+}
+
+span {
+    overflow: hidden;
+}

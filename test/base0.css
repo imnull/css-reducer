@@ -1,0 +1,17 @@
+a {
+    color: #f00;
+    font-size: 18px;
+}
+
+c {
+    font-weight: bold;
+}
+
+c c {
+    line-height: 3em;
+}
+
+span {
+    overflow: auto;
+    font-size: 15px;
+}
