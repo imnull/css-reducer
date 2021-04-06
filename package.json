@@ -12,7 +12,7 @@
     "url": "git+https://github.com/imnull/css-reducer.git"
   },
   "keywords": [
-    "css"
+    "css", "react", "react-native", "rn"
   ],
   "author": "imnull@outlook.com",
   "license": "ISC",
