@@ -51,8 +51,6 @@ export const getRules = (cssText: string, pathContext: string) => {
     return convertRules([ ...importRules, ...rules ])
 }
 
-
-
 export const getRulesFromFile = (filename: string, trap: string[] = []): TStyleSheetItem[] => {
     if(!existsSync(filename) || trap.includes(filename)) {
         return []
@@ -68,4 +66,3 @@ export const getRulesFromFile = (filename: string, trap: string[] = []): TStyleS
     const rules = allRules.filter(r => r.type === 'rule')
     return [ ...importRules, ...convertRules(rules) ]
 }
-
