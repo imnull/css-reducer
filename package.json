@@ -1,12 +1,12 @@
 {
-  "name": "css-computer",
-  "version": "2.1.1",
+  "name": "css-reduce-loader",
+  "version": "1.0.0",
   "description": "css",
-  "main": "dist/index.js",
+  "main": "dist/loader.js",
   "scripts": {
     "test": "ts-node test/test.ts",
     "init:normal": "ts-node test/init-normalize.ts",
-    "build": "rm -rf dist && tsc src/index.ts -d --module commonjs --lib esnext --outDir dist"
+    "build": "rm -rf dist && tsc src/loader.ts -d --module commonjs --lib esnext --outDir dist"
   },
   "repository": {
     "type": "git",
