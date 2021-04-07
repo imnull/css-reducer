@@ -1,19 +1,22 @@
 {
-  "name": "css-reduce-loader",
+  "name": "css-reduce-react-provider",
   "version": "1.0.0",
   "description": "css",
-  "main": "dist/loader.js",
+  "main": "dist/react-provider.js",
   "scripts": {
     "test": "ts-node test/test.ts",
     "init:normal": "ts-node test/init-normalize.ts",
-    "build": "rm -rf dist && tsc src/loader.ts -d --module commonjs --lib esnext --outDir dist"
+    "build": "rm -rf dist && tsc src/react-provider.tsx --jsx react -d --module commonjs --lib esnext --outDir dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imnull/css-reducer.git"
   },
   "keywords": [
-    "css", "react", "react-native", "rn"
+    "css",
+    "react",
+    "react-native",
+    "rn"
   ],
   "author": "imnull@outlook.com",
   "license": "ISC",
@@ -22,11 +25,13 @@
   },
   "homepage": "https://github.com/imnull/css-reducer#readme",
   "dependencies": {
-    "@types/css": "0.0.31",
     "css": "^3.0.0",
-    "css-what": "^5.0.0"
+    "css-what": "^5.0.0",
+    "react": "^17.0.2"
   },
   "devDependencies": {
-    "@types/node": "^14.14.37"
+    "@types/node": "^14.14.37",
+    "@types/css": "0.0.31",
+    "@types/react": "^17.0.3"
   }
 }
